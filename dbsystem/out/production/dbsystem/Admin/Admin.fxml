@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1186.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+    <children>
+        <TabPane layoutX="-1.0" layoutY="-2.0" prefHeight="718.0" prefWidth="1186.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Students">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0">
+                            <children>
+                                <HBox layoutX="396.0" prefHeight="674.0" prefWidth="795.0">
+                                    <children>
+                                        <TableView fx:id="studentable" prefHeight="674.0" prefWidth="793.0">
+                                            <columns>
+                                                <TableColumn fx:id="idcolumn" prefWidth="75.0" text="ID" />
+                                                <TableColumn fx:id="firstnamecolumn" prefWidth="165.0" text="First name" />
+                                                <TableColumn fx:id="lastnamecolumn" prefWidth="132.0" text="Last Name" />
+                                                <TableColumn fx:id="emailcolumn" prefWidth="186.0" text="Email" />
+                                                <TableColumn fx:id="datecolumn" prefWidth="232.0" text="Birth Date" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                                <VBox layoutX="6.0" prefHeight="677.0" prefWidth="385.0">
+                                    <children>
+                                        <VBox prefHeight="0.0" prefWidth="186.0" />
+                                        <Label prefHeight="27.0" prefWidth="386.0" text="Add Students">
+                                            <padding>
+                                                <Insets left="150.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="id" promptText="ID">
+                                            <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="firstname" promptText="First Name">
+                                            <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="lastname" promptText="Last Name">
+                                            <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="email" promptText="E-mail">
+                                            <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <DatePicker fx:id="dob" prefHeight="28.0" prefWidth="245.0">
+                                            <VBox.margin>
+                                                <Insets left="120.0" />
+                                            </VBox.margin>
+                                        </DatePicker>
+                                        <Button mnemonicParsing="false" onAction="#addStudent" prefHeight="25.0" prefWidth="391.0" text="Add">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="30.0" right="30.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#clearAll" prefHeight="25.0" prefWidth="399.0" text="Clear Form">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="30.0" right="30.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <Button mnemonicParsing="false" onAction="#loadStudentData" prefHeight="25.0" prefWidth="386.0" text="Load">
+                                            <VBox.margin>
+                                                <Insets left="30.0" right="30.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
